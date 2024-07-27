@@ -1,0 +1,40 @@
+.button {
+    border: 2px solid black;
+    padding: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Canvas {
+    margin: 10vw;
+    padding: 4vw;
+}
+
+#grey {
+    background-color: gray;
+}
+
+#white {
+    background-color: white;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#purple {
+    background-color: purple;
+}
+
+#pink {
+    background-color: pink;
+}
+
+#brown {
+    background-color: brown;
+}

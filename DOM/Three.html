@@ -20,7 +20,16 @@
         const div = document.createElement('div');
         console.log(div);
         div.className = "learner";
-        div.id = Math.random() * 10;
+        div.id = Math.round(Math.random() * 10 + 1);
+        div.setAttribute("tittle", "generated tittle");
+        div.style.backgroundColor = "green";
+        // div, style.color = "blue";
+        div.style.padding = "10px";
+        // div.innerText = "Hanzala Tahir";
+        // document.setAttribute("div", "hanzala Tahir")
+        const addtxt = document.createTextNode("Hanzala Tahir");
+        div.appendChild(addtxt);
+        document.body.appendChild(div)
     </script>
 </body>
 
