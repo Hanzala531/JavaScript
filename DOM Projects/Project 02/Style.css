@@ -1,0 +1,23 @@
+body {
+    background-image: url(image1.jpg);
+    color: aliceblue;
+}
+
+.main {
+    border: 2px solid transparent;
+    width: max-content;
+    padding: 30px;
+    display: inline-block;
+    margin-left: 35vw;
+    margin-top: 10vh;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+button {
+    margin-left: 30%;
+    padding: 10px;
+    border-radius: 100px;
+    background-color: transparent;
+    color: aliceblue;
+    font-size: x-large;
+}
