@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event project style</title>
+    <style>
+        * {
+            list-style: none;
+            background-color: #414141;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="images">
+        <h2>Amazing Images</h2>
+        <li id="parrot">
+            <img width="200px" src="https://images.pexels.com/photos/27349562/pexels-photo-27349562/free-photo-of-yellow-bird-on-wooden-fence.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="parrot">
+        </li>
+        <li id="boat">
+            <img width="200px" src="https://images.pexels.com/photos/27469250/pexels-photo-27469250/free-photo-of-a-black-and-white-photo-of-a-boat-on-a-dock.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="boat">
+        </li>
+        <li id="girl">
+            <img width="200px" src="https://images.pexels.com/photos/27064280/pexels-photo-27064280/free-photo-of-woman-posing-in-dress-on-a-beach.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="girl">
+        </li>
+        <li id="building">
+            <img width="200px" src="https://images.pexels.com/photos/27247762/pexels-photo-27247762/free-photo-of-sacred-reflections.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+        </li>
+        <li id="site">
+            <a href="https://www.google.com/" id="site">google</a>
+        </li>
+    </ul>
+
+</body>
+
+<script>
+    document.querySelector('#images').addEventListener('click', function(e) {
+        e.preventDefault();
+        // console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.parentNode.id);
+            let removeit = e.target.parentNode;
+            removeit.remove();
+        }
+
+
+
+        // removeit.parentNode.removeChild(removeit);
+    })
+</script>
+
+</html>

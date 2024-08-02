@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        * {
+            list-style: none;
+            background-color: #414141;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- <a href="https://www.google.com/search?q=what+are+capturing+events&oq=what+are+capturing+events&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIICAIQABgWGB4yCAgDEAAYFhgeMggIBBAAGBYYHjIICAUQABgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHjIICAgQABgWGB4yCAgJEAAYFhge0gEINDg2MmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8">CEvent types</a> -->
+    <ul id="images">
+        <h2>Amazing Images</h2>
+        <li id="parrot">
+            <img width="200px" src="https://images.pexels.com/photos/27349562/pexels-photo-27349562/free-photo-of-yellow-bird-on-wooden-fence.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="parrot">
+        </li>
+        <li id="boat">
+            <img width="200px" src="https://images.pexels.com/photos/27469250/pexels-photo-27469250/free-photo-of-a-black-and-white-photo-of-a-boat-on-a-dock.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="boat">
+        </li>
+        <li id="girl">
+            <img width="200px" src="https://images.pexels.com/photos/27064280/pexels-photo-27064280/free-photo-of-woman-posing-in-dress-on-a-beach.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="girl">
+        </li>
+        <li id="building">
+            <img width="200px" src="https://images.pexels.com/photos/27247762/pexels-photo-27247762/free-photo-of-sacred-reflections.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+        </li>
+        <li id="site">
+            <a href="https://www.google.com/" id="site">google</a>
+        </li>
+    </ul>
+    <script>
+        // All events in javascript are sequential
+        // document.querySelector('#building').onclick = function() {
+        //     alert('building clicked')
+        // }
+
+
+        //AttachEvent()
+        // document.getElementById('building').addEventListener('click', () => {
+        //         alert('building is clicked one again');
+        //         console.log("Building clicked");
+
+        //     }, false)
+        //jquery-on
+
+        // type of event 
+        // timestamp , defaultprevented , target , to element , src element
+        // current target ,client x , client y , screen x, screen y, tilt etc 
+        // alt key ,shift key ,key code ctrl key
+
+        // True keyword written at the end of event listenr functions are callled as capturing events. In these type of events any element that is being traced is traced first by the top and then to down mean an address of element is traced from bigger to smaller elements
+
+        // a link is given at the top of html file where we can get more info about capturing events and bubbling events
+        // The opposite of capturing events is bubbling events in which an element is being traced from down to top elements
+        // e.stopPropagation() this method stops the propagation of event means prevent bubbling
+
+
+
+        // document.getElementById('images').addEventListener('click', function(e) {
+        //     console.log("clicked inside the ul");
+        // })
+
+        // // document.getElementById('building').addEventListener('click', function(e) {
+        // //     console.log("Building clicked");
+        // //     e.stopPropagation()
+        // //         // alert('Building is clicked')
+        // // }, true)
+
+        // document.getElementById('site').addEventListener('click', function(e) {
+        //     e.preventDefault();
+        //     console.log("Google clicked");
+        // })
+    </script>
+
+
+</body>
+
+</html>
