@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Assignment</title>
+</head>
+<body>
+    <h2>Learning Javascript from Chai or Code</h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <h4>Perform the same function done in four.html but it shoud be controlled with the help of start and stop button></h4>
+    
+</body>
+<script>
+   let intervalId;
+    document.querySelector('#start').addEventListener('click', ()=>{
+        const sayDate = ()=>{
+        console.log("Hanzala Tahir");
+        console.log(Date.now());          
+    }
+    intervalId=setInterval(sayDate,1000)
+    })
+    document.querySelector('#stop').addEventListener('click',()=>{
+        clearInterval(intervalId);
+        console.log("stopped");
+        
+ 
+    })
+</script>
+<!-- <script src="Script.js"></script> -->
+</html>
