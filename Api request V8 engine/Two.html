@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+    let Data;
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            Data = JSON.parse(this.responseText);
+            // console.log(Data);
+            // console.log(typeof (Data));
+
+            // console.log(Data.id);
+
+        }
+
+    }
+    xhr.send();
+    // console.log(Data.);
+
+    const button = document.createElement('button');
+    button.innerHTML = "ShowData";
+    document.body.appendChild(button);
+
+    button.addEventListener('click', () => {
+        button.innerHTML = `<div id="card" >
+        <img src="https://avatars.githubusercontent.com/u/11613311?v=4" alt="" width="200px">
+        <h2>Profile name :${Data.login}</h2>
+        <h2>Followers no :${Data.followers}</h2>
+        <h2>BIO :- ${Data.followers}</h2>
+
+    </div>`
+    })
+    console.log(Data.login);
+
+
+</script>
+
+</html>
