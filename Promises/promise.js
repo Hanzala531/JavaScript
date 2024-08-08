@@ -57,8 +57,11 @@ promiseFour.then((user)=>{
 }).then((username)=>{
     console.log(username);
     
-}).catch((Error)=>{
-    console.log(Error);
+}).catch((error)=>{
+    console.log(error);
+    
+}).finally(()=>{
+    console.log("The promise is either resolved or rejected");
     
 })
 
